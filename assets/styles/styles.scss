@@ -6,6 +6,7 @@ $cyan: hsl(176, 68%, 64%);
 $blue: hsl(198, 60%, 50%);
 $raleway: 'Raleway';
 $opensans: 'Open Sans', sans-serif;
+$padding-border: 20px;
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
@@ -46,15 +47,18 @@ html {
 .Header {
   font-family: $opensans;
   // height: 60px;
-  padding: 20px;
-  font-size: 12px;
+  padding: $padding-border;
+  font-size: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .Header__logo img {
+    width: 80px;
+  }
   .Header__nav-ul {
     display: flex;
     li {
-      margin-left: 30px;
+      margin-left: 20px;
     }
   }
 }
@@ -65,9 +69,9 @@ html {
   flex-direction: column;
   .Hero__img {
     background-image: url('../img/bg-curvy-mobile.svg');
-    object-fit: fill;
     background-repeat: no-repeat;
-    background-position-y: bottom;
+    // background-position-y: bottom;
+    background-position-y: 200px;
     img {
       width: calc(100% - 60px);
       padding: 0 30px;
@@ -75,16 +79,19 @@ html {
   }
   .Hero__tittle {
     text-align: center;
-    padding: 20px 30px 0;
-    font-size: 23px;
+    padding: $padding-border 30px 0;
+    font-size: 1.8em;
     font-weight: 700;
   }
   .Hero__description {
     text-align: center;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: .9em;
+    line-height: $padding-border;
     padding: 10px 30px 10px;
+    // background-image: url('../img/bg-curvy-mobile.svg');
+    // background-repeat: no-repeat;
+    // background-position-y: bottom;
     background-color: $dark-blue-main;
   }
   .Hero__button {
@@ -92,22 +99,28 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 0 40px;
+    button {
+      width: 200px;
+    }
   }
 }
 
 .Button {
-  width: 200px;
+  width: 300px;
   height: 40px;
   border: none;
   border-radius: 50px;
   color: white;
   background: linear-gradient(to left, $blue, $cyan);
+  padding: 5px 10px
 }
 
 .Products {
-  padding: 20px 30px 140px;
+  padding: 0 30px 140px;
   background-color: $dark-blue-main;
+  display: grid;
+  grid-template-columns: 1fr;
   .Products__item {
     display: flex;
     padding-top: 60px;
@@ -115,19 +128,22 @@ html {
     align-items: center;
     flex-direction: column;
     img {
-      width: 50px;
-      margin: 20px 0;
+      width: 60px;
+      height: 50px;
+      margin: $padding-border 0;
     }
     .Products__item-tittle {
-      font-size: 14px;
+      font-size: 1em;
       letter-spacing: 1px;
-      font-weight: 900;
+      font-weight: 700;
+      text-align: center;
     }
     .Products__item-description {
       text-align: center;
-      font-size: 12px;
+      font-size: .9em;
       line-height: 15px;
       padding: 10px;
+      height: 100px;
     }
   }
 }
@@ -143,20 +159,20 @@ html {
     padding: 0 30px;
   }
   .About__tittle {
-    font-size: 16px;
+    font-size: 1.3em;
     font-weight: 700;
   }
   .About__description {
-    padding: 20px 30px;
-    line-height: 20px;
-    font-size: 12px;
+    padding: $padding-border 30px;
+    line-height: $padding-border;
+    font-size: 1em;
     font-weight: 400;
   }
   .About__link-aref {
     width: 100%;
     a {
       border-bottom: 2px solid $cyan;
-      font-size: 10px;
+      font-size: .9em;
       color: $cyan;
       margin-left: 30px;
       padding-bottom: 5px;
@@ -175,14 +191,14 @@ html {
   .Testimonials__box {
     border-radius: 5px;
     padding: 25px 30px;
-    margin-bottom: 20px;
+    margin-bottom: $padding-border;
     width: calc(100% - 60px);
     background: $dark-blue-testimonials;
     .Testimonials__box-description {
-      font-size: 11px;
+      font-size: .8em;
       font-family: $opensans;
-      line-height: 20px;
-      margin-bottom: 20px;
+      line-height: $padding-border;
+      margin-bottom: $padding-border;
     }
     .Testimonials__box-profile {
       display: flex;
@@ -196,7 +212,7 @@ html {
           margin: 2px 0;
         }
         p{
-          font-size: 9px;
+          font-size: .7em;
         }
         h5 {
           font-weight: 700;
@@ -217,19 +233,36 @@ html {
   bottom: 150px;
   border-radius: 5px;
   padding: 40px 30px;
-  margin: 0 20px;
+  margin: 0 $padding-border;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: $dark-blue-main;
   .Contact__tittle {
-    font-size: 18px;
+    font-size: 1.4em;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: $padding-border;
   }
   .Contact__description {
     text-align: center;
-    line-height: 20px;
-    font-size: 14px;
+    line-height: $padding-border;
+    font-size: 1em;
+    margin-bottom: 30px;
   }
+  .Contact__mail {
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    margin-bottom: 30px;
+  }
+}
+
+::placeholder {
+  color: rgb(176, 173, 173);
+  padding: 30px;
 }
 
 .Footer {
@@ -243,20 +276,20 @@ html {
     position: relative;
     bottom: 30px;
     display: flex;
-    padding: 0 20px 20px;
+    padding: 0 $padding-border $padding-border;
     line-height: 25px;
     img {
-      margin-right: 20px;
+      margin-right: $padding-border;
       padding-top: 5px;
     }
   }
   .Footer__workWithUs {
-    padding: 20px;
+    padding: $padding-border;
     display: flex;
     flex-direction: column;
     a {
-      margin-bottom: 20px;
-      font-size: 16px;
+      margin-bottom: $padding-border;
+      font-size: 1.2em;
     }
   }
   .Footer__socialLink {
@@ -267,11 +300,69 @@ html {
       width: 25px;
       height: 25px;
       border-radius: 50%;
-      font-size: 16px;
+      font-size: 1.2em;
       display: flex;
       margin: 0 10px 40px;
       justify-content: center;
       align-items: center;
     }
+  }
+}
+
+@media only screen and (min-width: 376px) {
+  html {
+    // background: red;
+    font-size: 16px;
+  }
+  .Header {
+    .Header__logo img {
+      width: 110px;
+    }
+  }
+  .Hero {
+    .Hero__info {
+      padding: 0 15%;
+      background-image: url('../img/bg-curvy-desktop.svg');
+      background-repeat: no-repeat;
+      // background-position-y: bottom;
+      background-position: bottom;
+      background-size: 100vw 30%;
+    }
+    .Hero__img {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+    }
+    .Hero__description {
+      background: transparent;
+    }
+    .Hero__button {
+      background: transparent;
+    }
+  }
+  .Products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15%;
+    grid-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Header__nav {
+    display: none;
+  }
+  .Contact .Contact__mail {
+    
+      width: 100%;
+      
+    
+  }
+  ::placeholder {
+    color: transparent;
+  }
+  .Button {
+    width: 100%;
   }
 }

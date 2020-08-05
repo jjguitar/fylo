@@ -31,7 +31,7 @@ html {
 .Header {
   font-family: "Open Sans", sans-serif;
   padding: 20px;
-  font-size: 12px;
+  font-size: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,6 +43,10 @@ html {
           align-items: center;
 }
 
+.Header .Header__logo img {
+  width: 80px;
+}
+
 .Header .Header__nav-ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,7 +54,7 @@ html {
 }
 
 .Header .Header__nav-ul li {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .Hero {
@@ -68,10 +72,8 @@ html {
 
 .Hero .Hero__img {
   background-image: url("../img/bg-curvy-mobile.svg");
-  -o-object-fit: fill;
-     object-fit: fill;
   background-repeat: no-repeat;
-  background-position-y: bottom;
+  background-position-y: 200px;
 }
 
 .Hero .Hero__img img {
@@ -82,14 +84,14 @@ html {
 .Hero .Hero__tittle {
   text-align: center;
   padding: 20px 30px 0;
-  font-size: 23px;
+  font-size: 1.8em;
   font-weight: 700;
 }
 
 .Hero .Hero__description {
   text-align: center;
   font-weight: 400;
-  font-size: 12px;
+  font-size: .9em;
   line-height: 20px;
   padding: 10px 30px 10px;
   background-color: #181f2a;
@@ -106,22 +108,31 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 0;
+  padding: 10px 0 40px;
+}
+
+.Hero .Hero__button button {
+  width: 200px;
 }
 
 .Button {
-  width: 200px;
+  width: 300px;
   height: 40px;
   border: none;
   border-radius: 50px;
   color: white;
   background: -webkit-gradient(linear, right top, left top, from(#339ecc), to(#65e2d9));
   background: linear-gradient(to left, #339ecc, #65e2d9);
+  padding: 5px 10px;
 }
 
 .Products {
-  padding: 20px 30px 140px;
+  padding: 0 30px 140px;
   background-color: #181f2a;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
 }
 
 .Products .Products__item {
@@ -142,21 +153,24 @@ html {
 }
 
 .Products .Products__item img {
-  width: 50px;
+  width: 60px;
+  height: 50px;
   margin: 20px 0;
 }
 
 .Products .Products__item .Products__item-tittle {
-  font-size: 14px;
+  font-size: 1em;
   letter-spacing: 1px;
-  font-weight: 900;
+  font-weight: 700;
+  text-align: center;
 }
 
 .Products .Products__item .Products__item-description {
   text-align: center;
-  font-size: 12px;
+  font-size: .9em;
   line-height: 15px;
   padding: 10px;
+  height: 100px;
 }
 
 .About {
@@ -182,14 +196,14 @@ html {
 }
 
 .About .About__tittle {
-  font-size: 16px;
+  font-size: 1.3em;
   font-weight: 700;
 }
 
 .About .About__description {
   padding: 20px 30px;
   line-height: 20px;
-  font-size: 12px;
+  font-size: 1em;
   font-weight: 400;
 }
 
@@ -199,7 +213,7 @@ html {
 
 .About .About__link-aref a {
   border-bottom: 2px solid #65e2d9;
-  font-size: 10px;
+  font-size: .9em;
   color: #65e2d9;
   margin-left: 30px;
   padding-bottom: 5px;
@@ -226,7 +240,7 @@ html {
 }
 
 .Testimonials .Testimonials__box .Testimonials__box-description {
-  font-size: 11px;
+  font-size: .8em;
   font-family: "Open Sans", sans-serif;
   line-height: 20px;
   margin-bottom: 20px;
@@ -260,7 +274,7 @@ html {
 }
 
 .Testimonials .Testimonials__box .Testimonials__box-profile .Testimonials__data p {
-  font-size: 9px;
+  font-size: .7em;
 }
 
 .Testimonials .Testimonials__box .Testimonials__box-profile .Testimonials__data h5 {
@@ -280,11 +294,24 @@ html {
   border-radius: 5px;
   padding: 40px 30px;
   margin: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #181f2a;
 }
 
 .Contact .Contact__tittle {
-  font-size: 18px;
+  font-size: 1.4em;
   font-weight: 700;
   text-align: center;
   margin-bottom: 20px;
@@ -293,7 +320,36 @@ html {
 .Contact .Contact__description {
   text-align: center;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.Contact .Contact__mail {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+
+::-webkit-input-placeholder {
+  color: #b0adad;
+  padding: 30px;
+}
+
+:-ms-input-placeholder {
+  color: #b0adad;
+  padding: 30px;
+}
+
+::-ms-input-placeholder {
+  color: #b0adad;
+  padding: 30px;
+}
+
+::placeholder {
+  color: #b0adad;
+  padding: 30px;
 }
 
 .Footer {
@@ -334,7 +390,7 @@ html {
 
 .Footer .Footer__workWithUs a {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 1.2em;
 }
 
 .Footer .Footer__socialLink {
@@ -351,7 +407,7 @@ html {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  font-size: 16px;
+  font-size: 1.2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -362,5 +418,70 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (min-width: 376px) {
+  html {
+    font-size: 16px;
+  }
+  .Header .Header__logo img {
+    width: 110px;
+  }
+  .Hero .Hero__info {
+    padding: 0 15%;
+    background-image: url("../img/bg-curvy-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100vw 30%;
+  }
+  .Hero .Hero__img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: transparent;
+  }
+  .Hero .Hero__description {
+    background: transparent;
+  }
+  .Hero .Hero__button {
+    background: transparent;
+  }
+  .Products {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    padding: 0 15%;
+    grid-gap: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Header__nav {
+    display: none;
+  }
+  .Contact .Contact__mail {
+    width: 100%;
+  }
+  ::-webkit-input-placeholder {
+    color: transparent;
+  }
+  :-ms-input-placeholder {
+    color: transparent;
+  }
+  ::-ms-input-placeholder {
+    color: transparent;
+  }
+  ::placeholder {
+    color: transparent;
+  }
+  .Button {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
