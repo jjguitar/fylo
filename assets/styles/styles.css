@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400, 700, 900;
+  src: local("Raleway"), local("Raleway-Regular"), url(https://fonts.gstatic.com/s/raleway/v11/0dTEPzkLWceF7z0koJaX1A.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+html {
+  background: #1c2431;
+  font-size: 14px;
+  color: white;
+  font-family: "Raleway";
+}
+
+.Header {
+  font-family: "Open Sans", sans-serif;
+  padding: 20px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Header .Header__nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Header .Header__nav-ul li {
+  margin-left: 30px;
+}
+
+.Hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Hero .Hero__img {
+  background-image: url("../img/bg-curvy-mobile.svg");
+  -o-object-fit: fill;
+     object-fit: fill;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+}
+
+.Hero .Hero__img img {
+  width: calc(100% - 60px);
+  padding: 0 30px;
+}
+
+.Hero .Hero__tittle {
+  text-align: center;
+  padding: 20px 30px 0;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.Hero .Hero__description {
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 10px 30px 10px;
+  background-color: #181f2a;
+}
+
+.Hero .Hero__button {
+  background-color: #181f2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+.Button {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: -webkit-gradient(linear, right top, left top, from(#339ecc), to(#65e2d9));
+  background: linear-gradient(to left, #339ecc, #65e2d9);
+}
+
+.Products {
+  padding: 20px 30px 140px;
+  background-color: #181f2a;
+}
+
+.Products .Products__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Products .Products__item img {
+  width: 50px;
+  margin: 20px 0;
+}
+
+.Products .Products__item .Products__item-tittle {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+
+.Products .Products__item .Products__item-description {
+  text-align: center;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 10px;
+}
+
+.About {
+  background: #181f2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.About .About__img img {
+  width: calc(100% - 60px);
+  padding: 0 30px;
+}
+
+.About .About__tittle {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.About .About__description {
+  padding: 20px 30px;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.About .About__link-aref {
+  width: 100%;
+}
+
+.About .About__link-aref a {
+  border-bottom: 2px solid #65e2d9;
+  font-size: 10px;
+  color: #65e2d9;
+  margin-left: 30px;
+  padding-bottom: 5px;
+}
+
+.About .About__link-aref a img {
+  width: 10px;
+  padding-left: 5px;
+}
+
+.Testimonials {
+  padding-top: 150px;
+  background-color: #181f2a;
+  padding: 30px;
+}
+
+.Testimonials .Testimonials__box {
+  border-radius: 5px;
+  padding: 25px 30px;
+  margin-bottom: 20px;
+  width: calc(100% - 60px);
+  background: #1c2431;
+}
+
+.Testimonials .Testimonials__box .Testimonials__box-description {
+  font-size: 11px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.Testimonials .Testimonials__box .Testimonials__box-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 0;
+}
+
+.Testimonials .Testimonials__box .Testimonials__box-profile .Testimonials__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.Testimonials .Testimonials__box .Testimonials__box-profile .Testimonials__data h5, .Testimonials .Testimonials__box .Testimonials__box-profile .Testimonials__data p {
+  margin: 2px 0;
+}
+
+.Testimonials .Testimonials__box .Testimonials__box-profile .Testimonials__data p {
+  font-size: 9px;
+}
+
+.Testimonials .Testimonials__box .Testimonials__box-profile .Testimonials__data h5 {
+  font-weight: 700;
+}
+
+.Testimonials .Testimonials__box .Testimonials__box-profile img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=styles.css.map */
