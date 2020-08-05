@@ -212,8 +212,9 @@ html {
 
 .Testimonials {
   padding-top: 150px;
-  background-color: #181f2a;
-  padding: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#181f2a), to(#1c2431));
+  background: linear-gradient(#181f2a, #1c2431);
+  padding: 30px 30px 300px;
 }
 
 .Testimonials .Testimonials__box {
@@ -221,7 +222,7 @@ html {
   padding: 25px 30px;
   margin-bottom: 20px;
   width: calc(100% - 60px);
-  background: #1c2431;
+  background: #202a3c;
 }
 
 .Testimonials .Testimonials__box .Testimonials__box-description {
@@ -271,5 +272,95 @@ html {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+
+.Contact {
+  position: relative;
+  bottom: 150px;
+  border-radius: 5px;
+  padding: 40px 30px;
+  margin: 0 20px;
+  background: #181f2a;
+}
+
+.Contact .Contact__tittle {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.Contact .Contact__description {
+  text-align: center;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.Footer {
+  background: #0b1523;
+}
+
+.Footer .Footer__logo {
+  position: relative;
+  bottom: 70px;
+  margin-left: 30px;
+}
+
+.Footer .Footer__info {
+  position: relative;
+  bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px 20px;
+  line-height: 25px;
+}
+
+.Footer .Footer__info img {
+  margin-right: 20px;
+  padding-top: 5px;
+}
+
+.Footer .Footer__workWithUs {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Footer .Footer__workWithUs a {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.Footer .Footer__socialLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Footer .Footer__socialLink a {
+  border: 1px solid white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10px 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

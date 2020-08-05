@@ -170,17 +170,14 @@ html {
 
 .Testimonials {
   padding-top: 150px;
-  background-color: $dark-blue-main;
-  padding: 30px;
-  .Testimonials__quotingMarks {
-    
-  }
+  background: linear-gradient($dark-blue-main, $dark-blue);
+  padding: 30px 30px 300px;
   .Testimonials__box {
     border-radius: 5px;
     padding: 25px 30px;
     margin-bottom: 20px;
     width: calc(100% - 60px);
-    background: $dark-blue;
+    background: $dark-blue-testimonials;
     .Testimonials__box-description {
       font-size: 11px;
       font-family: $opensans;
@@ -211,6 +208,70 @@ html {
         height: 30px;
         margin-right: 10px;
       }
+    }
+  }
+}
+
+.Contact {
+  position: relative;
+  bottom: 150px;
+  border-radius: 5px;
+  padding: 40px 30px;
+  margin: 0 20px;
+  background: $dark-blue-main;
+  .Contact__tittle {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Contact__description {
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+  }
+}
+
+.Footer {
+  background: $dark-blue-footer;
+  .Footer__logo {
+    position: relative;
+    bottom: 70px;
+    margin-left: 30px;
+  }
+  .Footer__info {
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    padding: 0 20px 20px;
+    line-height: 25px;
+    img {
+      margin-right: 20px;
+      padding-top: 5px;
+    }
+  }
+  .Footer__workWithUs {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+  }
+  .Footer__socialLink {
+    display: flex;
+    justify-content: center;
+    a {
+      border: 1px solid white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      font-size: 16px;
+      display: flex;
+      margin: 0 10px 40px;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
