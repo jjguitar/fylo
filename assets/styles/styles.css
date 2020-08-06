@@ -441,7 +441,7 @@ html {
     padding: 0 15%;
     background-image: url("../img/bg-curvy-desktop.svg");
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: 101%;
     background-size: 100vw 30%;
   }
   .Hero .Hero__img {
